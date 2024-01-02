@@ -1,0 +1,107 @@
+.character {
+}
+
+.character.left {
+}
+
+.rotateContainer {
+  width: 64px;
+  height: 64px;
+  transform-origin: center;
+  position: absolute;
+  transform: rotate(90deg);
+}
+
+.rotateContainer.left {
+  animation: rotate-left 300ms;
+}
+
+.rotateContainer.enemy {
+  transform: rotate(-90deg);
+}
+
+@keyframes rotate-left {
+  0% {
+    transform: rotate(90deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(90deg);
+  }
+}
+
+.rotateContainer.right {
+  animation: rotate-right 300ms;
+}
+
+@keyframes rotate-right {
+  0% {
+    transform: rotate(90deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(90deg);
+  }
+}
+
+.leftLeg {
+  transform: translate(3%, 42%) rotate(7deg);
+}
+
+.leftLeg.move {
+  animation: left-leg-move 1200ms;
+}
+
+.rightLeg {
+  transform: translate(2%, 89%) rotate(-11deg);
+}
+
+.rightLeg.move {
+  animation: right-leg-move 1200ms reverse;
+}
+
+@keyframes left-leg-move {
+  0% {
+    transform: translate(3%, 42%) rotate(7deg);
+  }
+  25% {
+    transform: translate(72%, 42%) rotate(7deg);
+  }
+  50% {
+    transform: translate(3%, 42%) rotate(7deg);
+  }
+  51% {
+    transform: translate(6%, 42%) rotate(-197deg);
+  }
+  75% {
+    transform: translate(-51%, 61%) rotate(-197deg);
+  }
+  100% {
+    transform: translate(6%, 42%) rotate(-197deg);
+  }
+}
+
+@keyframes right-leg-move {
+  0% {
+    transform: translate(2%, 89%) rotate(-11deg);
+  }
+  25% {
+    transform: translate(65%, 89%) rotate(-11deg);
+  }
+  50% {
+    transform: translate(2%, 89%) rotate(-11deg);
+  }
+  51% {
+    transform: translate(6%, 108%) rotate(187deg);
+  }
+  75% {
+    transform: translate(-62%, 108%) rotate(187deg);
+  }
+  100% {
+    transform: translate(6%, 108%) rotate(187deg);
+  }
+}
