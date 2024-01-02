@@ -118,7 +118,10 @@ const App: React.FC = () => {
   }, [isStart]);
 
   return (
-    <div style={{ position: "relative", margin: "0 auto" }}>
+    <div
+      style={{ position: "relative", margin: "0 auto" }}
+      onDoubleClick={(e) => e.preventDefault()}
+    >
       <Floor onClick={setCharacterPosition} />
       <Net />
       <Character position={characterPosition} />
